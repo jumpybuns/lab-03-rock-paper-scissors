@@ -45,11 +45,10 @@ main {
 h1 {
     font-size: 5em;
     font-weight: bolder;
-    font-style: var(--header-height);
     display: flex;
     justify-content: center;
     margin-left: center;
-    margin-right: center;
+    margin-right: 100px;
     margin-top: center;
 }
 
@@ -74,6 +73,7 @@ header {
     background-color: var(--color3);
     height: var(--header-height);
     box-shadow: var(--shadow);
+
 }
 
 footer {
@@ -184,3 +184,39 @@ footer {
     }
 
   }
+
+  input[type='radio']{
+    display: none;
+}
+
+input[type='radio']:checked + img{
+    border: 3px solid black;
+}
+
+#reset-button{
+    display: none; 
+}
+
+#button{
+    display: block;
+}
+
+
+#winSpan{
+    font-size: 1em;
+    font-weight: normal;
+}
+
+#loseSpan{
+    font-size: 1em;
+    font-weight: normal;
+}
+
+#drawSpan{
+    font-size: 1em;
+    font-weight: normal;
+}
+
+#resultSpan{
+    font-size: 3em;
+}

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/home.css">
+    <title><em BEAR HUNTER NINJA></em></title>
+</head>
+
+<body>
+    <header>
+        <div class="gutter-right logo">
+            
+        </div>
+    </header>
+    <main>
+        <section class="main-section">
+            <p>You know the rules: Choose one and see if you can beat me.
+            Bear eats Ninja, Hunter shoots Bear, and Ninja assassinates Hunter</p>
+       
+            <h2>
+                Are you ready? Lets play
+            </h2>
+            
+        <div>
+            <label>
+                <input 
+                type="radio"
+                name="choice"
+                value="Bear"
+                checked
+                />
+                Bear
+                <img src="./assets/bear.jpg">
+            
+            </label>
+            <label>
+                <input 
+                type="radio"
+                name="choice"
+                value="Hunter"
+                checked
+                />
+                Hunter
+                <img src="./assets/hunter.jpg">
+            </label>
+            <label>
+                <input 
+                type="radio"
+                name="choice"
+                value="Ninja"
+                checked
+                />
+                Ninja
+                <img src="./assets/ninja.jpg">
+            </label>
+        </div>
+        <button id="button">GO!</button>
+        <div>
+            <span id="resultSpan"></span>
+        </div>
+        <div>
+            Wins: <span id="winSpan"></span>
+        </div>
+        <div>
+            Losses: <span id="loseSpan"></span>
+        </div>
+        <div>
+            Ties: <span id="drawSpan"></span>
+        </div>
+        <div>
+            Win Rate: <span id="percentSpan"></span>
+        </div>
+        
+        <p>
+            </p>
+
+        </section>
+    </main>
+    <footer>
+        <div class="copy gutter-right">
+    </footer>
+
+    <script type="module" src="app.js"></script>
+</body>
+
+</html>

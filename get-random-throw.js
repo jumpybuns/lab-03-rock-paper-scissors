@@ -26,32 +26,19 @@ export function getRandomThrow() {
 // }
 
 export function compareResults(userThrow, computerThrow) {
-    if (userThrow === 'Bear' && computerThrow === 'Hunter') {
+    if ((userThrow === 'Bear' && computerThrow === 'Hunter') || 
+        (userThrow === 'Hunter' && computerThrow === 'Ninja') || 
+        (userThrow === 'Ninja' && computerThrow === 'Bear')) {
         return 'lose';
     }
-    if (userThrow === 'Hunter' && computerThrow === 'Ninja') {
-        return 'lose';
-    }
-    if (userThrow === 'Ninja' && computerThrow === 'Bear') {
-        return 'lose';
-    }
-    if (userThrow === 'Bear' && computerThrow === 'Ninja') {
+    if ((userThrow === 'Bear' && computerThrow === 'Ninja') || 
+        (userThrow === 'Ninja' && computerThrow === 'Hunter') || 
+        (userThrow === 'Hunter' && computerThrow === 'Bear')) {
         return 'win';
     }
-    if (userThrow === 'Ninja' && computerThrow === 'Hunter') {
-        return 'win';
-    }
-    if (userThrow === 'Hunter' && computerThrow === 'Bear') {
-        return 'win';
-    }
-    if (userThrow === 'Ninja' && computerThrow === 'Ninja') {
+    if ((userThrow === 'Ninja' && computerThrow === 'Ninja') || 
+        (userThrow === 'Hunter' && computerThrow === 'Hunter') || 
+        (userThrow === 'Bear' && computerThrow === 'Bear')) {
         return 'draw';
     }
-    if (userThrow === 'Hunter' && computerThrow === 'Hunter') {
-        return 'draw';
-    }
-    if (userThrow === 'Bear' && computerThrow === 'Bear') {
-        return 'draw';
-    }
-
 }

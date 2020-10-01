@@ -44,8 +44,14 @@ export function compareResults(userThrow, computerThrow) {
     if (userThrow === 'Hunter' && computerThrow === 'Bear') {
         return 'win';
     }
-    if (userThrow === computerThrow) {
+    if (userThrow === 'Ninja' && computerThrow === 'Ninja') {
         return 'draw';
     }
-   
+    if (userThrow === 'Hunter' && computerThrow === 'Hunter') {
+        return 'draw';
+    }
+    if (userThrow === 'Bear' && computerThrow === 'Bear') {
+        return 'draw';
+    }
+
 }

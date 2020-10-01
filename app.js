@@ -3,6 +3,7 @@
 import { getRandomThrow, compareResults, } from './get-random-throw.js';
 
 const button = document.querySelector('#button');
+const resetButton = document.querySelector('#reset-button');
 const winSpan = document.querySelector('#winSpan');
 const loseSpan = document.querySelector('#loseSpan');
 
@@ -29,16 +30,17 @@ button.addEventListener('click', () => {
 
     const checkedRadioButton = document.querySelector('input:checked');
     const userGuess = checkedRadioButton.value;
+    // console.log(thrownValue, userGuess);
 
     const result = compareResults(userGuess, thrownValue);
 
     if (result === 'win') {
         wins++;
         total++;
-
+        resultSpan.textContent = 'You win!';
         winSpan.textContent = wins;
         percentSpan.textContent = `${(wins / total) * 100}%`;
-        resultSpan.textContent = 'You win!';
+        
 
     } if (result === 'lose') {
         losses++;
@@ -48,7 +50,7 @@ button.addEventListener('click', () => {
         resultSpan.textContent = 'You lose!';
 
 
-    } else {
+    } if (result === 'draw') {
         draws++;
         total++;
         drawSpan.textContent = draws;
@@ -57,3 +59,16 @@ button.addEventListener('click', () => {
     } 
 });
 
+resetButton.addEventListener('click', () => {
+
+    wins = 0;
+    losses = 0;
+    draws = 0;
+    total = 0;
+
+    winSpan.textContent = '';
+    loseSpan.textContent = '';
+    drawSpan.textContent = '';
+    percentSpan.textContent = '';
+    resultSpan.textContent = '';
+});
